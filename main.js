@@ -3,7 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 
+import {$http} from '@escook/request-miniprogram'
+
 Vue.config.productionTip = false
+
+uni.$http = $http
+uni.$http.baseUrl = 'http://127.0.0.1:7777'
+
+$http.beforeRequest = function(){
+	uni.showLoading({
+		title:"正在请求数据..."
+	})
+}
+$http.afterRequest = function(){
+	uni.hideLoading()
+}
 
 App.mpType = 'app'
 
@@ -13,13 +27,3 @@ const app = new Vue({
 app.$mount()
 // #endif
 
-// #ifdef VUE3
-import { createSSRApp } from 'vue'
-import App from './App.vue'
-export function createApp() {
-  const app = createSSRApp(App)
-  return {
-    app
-  }
-}
-// #endif
