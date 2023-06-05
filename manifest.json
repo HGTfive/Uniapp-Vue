@@ -64,7 +64,10 @@
             "urlCheck" : false,
             "es6" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+		"optimization":{
+			"subPackages":true
+		}
     },
     "vueVersion" : "2"
 }

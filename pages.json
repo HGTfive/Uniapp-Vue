@@ -24,7 +24,27 @@
             }
             
         }
+		
     ],
+	"subPackages": [
+		{
+			"root": "subPack",
+			"pages": [
+				{
+					"path": "cateDetail/details"
+				}
+			    ,{
+                    "path" : "commentDetail/commentDetail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "小程序",
@@ -48,7 +68,7 @@
 				"pagePath": "pages/cate/cate",
 				"iconPath": "static/message_untouched.png",
 				"selectedIconPath": "static/message_touched.png",
-				"text": "分类"
+				"text": "我的"
 				
 			}
 		]
